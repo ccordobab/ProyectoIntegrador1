@@ -1,5 +1,6 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import firebase from "src/app/chat/firebase"; // Path to your firebase.js file
+import firebase from './firebase.js';
 
 const Chat = () => {
   const [message, setMessage] = useState("");
@@ -22,7 +23,7 @@ const Chat = () => {
     const messagesRef = db.ref("messages");
     const newMessage = {
       text: message,
-      timestamp: firebase.database.ServerValue.TIMESTAMP
+      timestamp: firebase.database.ServerValue.TIMESTAMP,
     };
 
     messagesRef.push(newMessage);
