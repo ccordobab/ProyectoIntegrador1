@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import Notification from "@/components/Notification";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import React from 'react';
+import chat from "@/app/chat/Chat";
 
 const inter = Inter({ subsets: ["latin"] });
 
